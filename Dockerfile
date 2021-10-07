@@ -1,5 +1,4 @@
-FROM gcc:10
-COPY myprog.c /myapp/
+FROM openjdk:16
+COPY . /myapp/
 WORKDIR /myapp/
-RUN gcc myprog.c -o myprog
-RUN chmod +x myprog
+RUN javac -cp src/ src/Main.java -d dst/
