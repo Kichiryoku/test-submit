@@ -1,5 +1,5 @@
 FROM gcc:10
-WORKDIR /app/
-COPY myprog.c ./
+COPY myprog.c /myapp/
+WORKDIR /myapp/
 RUN gcc myprog.c -o myprog
 RUN chmod +x myprog
